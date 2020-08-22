@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+<meta content="utf-8" http-equiv="encoding">
+<title>Brie's Page</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+Html, body {
+  height: 100%;
+  Width: 100%;
+} 
+
+Body {
+  Display: flex;
+  Align-items: center;
+  Justify-content: center;
+text-align: center;
+margin: 0;
+
+    color: #ea2c2c;
+}
+
+
+@keyframes redden {
+  0% {
+     Color: #333;
+  }
+  100% {
+    color: #ea2c2c;
+  }
+}
+
+h1 {
+  font-family: Helvetica;
+text-align: center;
+Font-size: 5rem;
+  Animation: redden 5s 1;
+} 
+
+
+</style>
+</head>
+
+<body>
+
+<h1><em id="sup-bitches"></em></h1>
+<script type="text/javascript">
+
+var lettersWritten = 0;
+
+var letters = [
+ {
+   Letter: 'S',
+   Pause: 100
+ },
+ {
+   Letter: 'u',
+   Pause: 100
+ },
+ {
+   Letter: 'p',
+   Pause: 100
+ },
+ {
+   Letter: '.',
+   Pause: 200
+ },
+ {
+   Letter: ' ',
+   Pause: 600
+ },
+ {
+   Letter: 'B',
+   Pause: 200
+ },
+ {
+   Letter: 'i',
+   Pause: 100
+ },
+ {
+   Letter: 't',
+   Pause: 100
+ },
+ {
+   Letter: 'c',
+   Pause: 100
+ },
+ {
+   Letter: 'h',
+   Pause: 100
+ },
+ {
+   Letter: 'e',
+   Pause: 100
+ },
+ {
+   Letter: 's',
+   Pause: 400
+ },
+ {
+   Letter: '.  ',
+   Pause: 600
+ },
+ {
+   Letter: '💎',
+   Pause: 70
+ },
+ {
+   Letter: '💎',
+   Pause: 70
+ },
+]
+ 
+function writeLetter() {
+  if (!letters[lettersWritten]) { return }
+
+  setTimeout(writeLetter, letters[lettersWritten].Pause);
+  document.getElementById('sup-bitches').innerText = unescape(letters.slice(0, ++lettersWritten).map(l => l.Letter).join(''));
+}
+
+setTimeout(writeLetter, 0);
+
+</script>
+</body>
+
+</html>
